@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruna Rizzieri | Psicóloga em Joinville e online</title>
+<meta name="description" content="Psicoterapia com terapia cognitivo-comportamental para ansiedade, depressão, compulsão alimentar e decisões importantes. Presencial no Santo Antônio, em Joinville, ou online.">
+<meta name="theme-color" content="#FAF5F0">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --branco:#FFFFFF;
+  --areia:#FAF5F0;
+  --areia-2:#F3EAE1;
+  --tinta:#2B2930;
+  --cinza:#66626B;
+  --coral:#FF7A45;
+  --sol:#FFCE3A;
+  --lilas:#C9B9FA;
+  --rosa:#F8B4CF;
+  --ceu:#9FD0F5;
+  --violeta:#5536D6;
+  --violeta-2:#4127B5;
+  --titulo:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --texto:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --raio:28px;
+  --gutter:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--texto);background:var(--branco);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--violeta);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(2.3rem,8.4vw,4.2rem)}
+h2{font-size:clamp(1.9rem,6.6vw,3.2rem)}
+h3{font-size:1.35rem;line-height:1.2}
+.centro{text-align:center}
+.sub{color:var(--cinza);font-size:18px;max-width:52ch}
+
+/* botões */
+.pilula{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 16px/1 var(--titulo);text-decoration:none;padding:16px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.pilula:hover{transform:translateY(-2px)}
+.pilula.violeta{background:var(--violeta);color:#fff;box-shadow:0 6px 16px rgba(85,54,214,.25)}
+.pilula.violeta:hover{background:var(--violeta-2)}
+.pilula.escura{background:var(--tinta);color:#fff}
+.pilula.clara{background:#fff;color:var(--tinta)}
+.pilula svg{width:18px;height:18px;flex:none}
+
+/* faixa de aviso */
+.aviso{background:var(--sol);text-align:center;font-size:14.5px;padding:10px var(--gutter)}
+.aviso a{font-weight:700;text-underline-offset:3px}
+
+/* cabeçalho */
+.cab{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.2) blur(6px);transition:box-shadow .3s ease}
+.cab.rolou{box-shadow:0 4px 18px rgba(43,41,48,.07)}
+.cab .linha{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .bola{width:30px;height:30px;border-radius:50%;background:var(--coral);flex:none;position:relative}
+.logo .bola::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--sol);right:-3px;top:-2px;border:2px solid #fff}
+.logo b{font-family:var(--titulo);font-weight:700;font-size:19px;letter-spacing:-.01em;line-height:1.05;display:block}
+.logo small{display:block;font-size:12.5px;color:var(--cinza);line-height:1.1}
+.cab .nav{display:none}
+.menu-btn{flex:none;display:inline-flex;align-items:center;gap:8px;font:600 14px var(--titulo);background:var(--areia);border:0;border-radius:999px;padding:11px 16px;cursor:pointer;color:var(--tinta);min-height:42px}
+.menu-btn .linhas{position:relative;width:14px;height:10px;border-top:2px solid currentColor;border-bottom:2px solid currentColor}
+.menu-btn .linhas::before,.menu-btn .linhas::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:currentColor;transition:transform .25s}
+.cab.aberto .menu-btn .linhas{border-color:transparent}
+.cab.aberto .menu-btn .linhas::before{transform:rotate(45deg)}
+.cab.aberto .menu-btn .linhas::after{transform:rotate(-45deg)}
+.menu-mob{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.cab.aberto .menu-mob{max-height:460px}
+.menu-mob .wrap{display:grid;padding-bottom:16px}
+.menu-mob a{font-family:var(--titulo);font-weight:600;font-size:1.3rem;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--areia-2)}
+.menu-mob a.pilula{margin-top:14px;border:0;font-size:16px;padding:16px}
+
+/* herói */
+.heroi{padding:44px 0 20px}
+.heroi h1{max-width:16ch;margin:0 auto}
+.heroi .sub{margin:18px auto 0}
+.heroi .acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.duo{display:grid;gap:16px;margin-top:44px}
+.cartao-g{background:var(--areia);border-radius:var(--raio);padding:30px 22px 0;text-align:center;overflow:hidden;position:relative;min-height:380px;display:flex;flex-direction:column;align-items:center}
+.cartao-g h3{font-size:clamp(1.35rem,4.6vw,1.75rem);max-width:18ch}
+.cartao-g p{color:var(--cinza);font-size:16px;margin-top:8px;max-width:34ch}
+.cartao-g .pilula{margin-top:18px;margin-bottom:30px}
+.cena{position:relative;width:100%;max-width:420px;height:210px;margin-top:auto}
+
+/* personagem: pedrinha com rosto */
+.pedra{position:absolute;animation:respira 5s ease-in-out infinite}
+@keyframes respira{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.03)}}
+.brilho{position:absolute;animation:pisca 3.2s ease-in-out infinite}
+@keyframes pisca{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+/* poltrona estilizada */
+.poltrona{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:230px}
+
+/* celular com conversa */
+.cel{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);width:200px;height:250px;background:var(--tinta);border-radius:30px;padding:9px}
+.cel .tela{background:#EDE6DD;border-radius:22px;height:100%;padding:16px 10px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.cel .topo-c{display:flex;align-items:center;gap:7px;font:700 11px var(--titulo)}
+.cel .topo-c i{width:20px;height:20px;border-radius:50%;background:var(--coral);flex:none}
+.bal{font-size:11.5px;line-height:1.35;padding:8px 10px;border-radius:14px;max-width:85%}
+.bal.eu{background:#D9FDD3;align-self:flex-end;border-bottom-right-radius:4px}
+.digitando{display:flex;gap:4px;background:#fff;padding:9px 11px;border-radius:14px;border-bottom-left-radius:4px;align-self:flex-start}
+.digitando span{width:6px;height:6px;border-radius:50%;background:#9a96a0;animation:pula 1.2s infinite}
+.digitando span:nth-child(2){animation-delay:.15s}
+.digitando span:nth-child(3){animation-delay:.3s}
+@keyframes pula{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+
+/* escolha */
+.escolha{padding:72px 0 40px}
+.opcoes{display:grid;gap:12px;margin-top:30px}
+.opcao{display:flex;align-items:center;gap:14px;text-decoration:none;border:2px solid #E7E1DA;border-radius:16px;padding:16px 18px;font:600 17px var(--titulo);background:#fff;transition:border-color .2s,transform .2s,box-shadow .2s}
+.opcao:hover{border-color:var(--tinta);transform:translateY(-2px);box-shadow:0 8px 18px rgba(43,41,48,.07)}
+.opcao span{flex:1;text-align:left}
+.opcao svg.ic{width:38px;height:38px;flex:none}
+.opcao svg.seta{width:18px;height:18px;flex:none}
+
+/* painéis em cor */
+.paineis{padding:40px 0;display:grid;gap:16px}
+.painel{border-radius:var(--raio);padding:38px 24px;display:grid;gap:28px;overflow:hidden;position:relative}
+.painel.amarelo{background:var(--sol)}
+.painel.rosa{background:var(--rosa)}
+.painel h2{max-width:13ch}
+.painel p{font-size:17.5px;max-width:40ch;margin-top:14px}
+.painel .pilula{margin-top:22px}
+.bolhas{display:grid;gap:10px;align-content:center;position:relative}
+.bolha{background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 8px 20px rgba(43,41,48,.08);max-width:320px;font-size:15.5px}
+.bolha b{display:flex;align-items:center;gap:7px;font:700 13px var(--titulo);margin-bottom:3px}
+.bolha b i{width:9px;height:9px;border-radius:50%;background:var(--violeta)}
+.bolha:nth-child(2){margin-left:auto}
+.fonte-bolha{font-size:13px;margin-top:4px;opacity:.75}
+.passos{list-style:none;display:grid;gap:12px;counter-reset:p}
+.passos li{background:#fff;border-radius:18px;padding:16px 18px 16px 62px;position:relative;font-size:16px}
+.passos li b{display:block;font:700 17px var(--titulo)}
+.passos li::before{counter-increment:p;content:counter(p);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--tinta);color:#fff;display:grid;place-items:center;font:700 15px var(--titulo)}
+
+/* depoimentos */
+.depo{padding:72px 0}
+.nota{display:inline-flex;align-items:center;gap:10px;background:var(--areia);border-radius:999px;padding:8px 16px;font:600 15px var(--titulo);margin-top:16px}
+.nota .estrelas{color:#F2A900;letter-spacing:2px}
+.trilho{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px var(--gutter) 12px;margin:0 calc(var(--gutter)*-1);scrollbar-width:none}
+.trilho::-webkit-scrollbar{display:none}
+.dep{scroll-snap-align:start;flex:0 0 84%;background:var(--areia);border-radius:24px;padding:26px 22px;display:flex;flex-direction:column;gap:14px}
+.dep:nth-child(3n+2){background:#EEE9FE}
+.dep:nth-child(3n+3){background:#E5F3FD}
+.dep p{font-size:16.5px}
+.dep .quem{display:flex;align-items:center;gap:10px;margin-top:auto;font:600 14px var(--titulo)}
+.dep .quem i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-style:normal;color:#fff;background:var(--coral)}
+.dep:nth-child(3n+2) .quem i{background:var(--violeta)}
+.dep:nth-child(3n+3) .quem i{background:#2F86C9}
+.dep .quem small{display:block;font:400 12.5px var(--texto);color:var(--cinza)}
+.controles{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.controles button{width:44px;height:44px;border-radius:50%;border:2px solid #E7E1DA;background:#fff;cursor:pointer;display:grid;place-items:center}
+.controles button:hover{border-color:var(--tinta)}
+.controles svg{width:18px;height:18px}
+
+/* onde atendo */
+.onde{padding:40px 0}
+.painel-azul{background:var(--violeta);color:#fff;border-radius:var(--raio);padding:38px 24px;display:grid;gap:26px;overflow:hidden}
+.painel-azul .sub{color:rgba(255,255,255,.85)}
+.locais{display:grid;gap:12px}
+.local{background:rgba(255,255,255,.12);border-radius:20px;padding:20px}
+.local b{display:block;font:700 18px var(--titulo);margin-bottom:4px}
+.local address{font-style:normal;font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9)}
+.local a{color:#fff;font-weight:700;text-underline-offset:3px}
+.mapa{width:100%;height:280px;border:0;border-radius:20px;display:block;background:rgba(255,255,255,.15)}
+.lacuna{display:inline-block;background:var(--sol);color:var(--tinta);padding:0 8px;border-radius:6px;font-weight:700;font-size:13.5px}
+
+/* sobre */
+.sobre{padding:72px 0 40px}
+.sobre .grade{display:grid;gap:26px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;background:var(--areia);display:grid;place-items:center;position:relative;margin:0 auto}
+.avatar small{font-size:12px;color:var(--cinza);text-align:center;line-height:1.3;padding:0 18px}
+.avatar::after{content:"";position:absolute;width:42px;height:42px;border-radius:50%;background:var(--sol);right:-4px;bottom:8px;border:4px solid #fff}
+.sobre p{margin-top:12px;max-width:58ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{background:var(--areia);border-radius:999px;padding:7px 14px;font:600 13.5px var(--titulo)}
+
+/* perguntas */
+.faq{padding:40px 0 72px}
+.faq details{border-bottom:2px solid var(--areia-2)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font:600 18px var(--titulo)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--areia);position:relative;transition:transform .25s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--tinta);transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--cinza);max-width:62ch}
+.faq .lista-faq{margin-top:26px;border-top:2px solid var(--areia-2)}
+
+/* final */
+.final{padding:0 0 40px}
+.final .caixa{background:var(--coral);border-radius:var(--raio);padding:48px 24px;text-align:center;position:relative;overflow:hidden}
+.final h2{max-width:16ch;margin:0 auto}
+.final p{margin:14px auto 0;max-width:40ch;font-size:18px}
+.final .pilula{margin-top:24px}
+
+footer{background:var(--areia);border-radius:var(--raio) var(--raio) 0 0;padding:40px 0 calc(28px + env(safe-area-inset-bottom));font-size:15px;color:var(--cinza)}
+.rod-topo{display:grid;gap:12px;padding-bottom:28px;border-bottom:2px solid var(--areia-2)}
+.rod-topo p{max-width:34ch;line-height:1.5}.rod-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 18px;padding:28px 0}
+.rod-cols div{display:flex;flex-direction:column;gap:9px;min-width:0}
+.rod-cols h4{font:700 12.5px var(--titulo);letter-spacing:.08em;text-transform:uppercase;color:var(--tinta);margin-bottom:2px}
+.rod-cols a{color:var(--tinta);text-decoration:none;line-height:1.35}
+.rod-cols a:hover{color:var(--violeta)}
+.rod-cols p{line-height:1.5}
+.rod-cols .rod-end{grid-column:1/-1}
+.rod-base{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:2px solid var(--areia-2);font-size:13.5px}
+footer .sano{display:inline-flex;align-items:center;gap:8px;color:var(--tinta);text-decoration:none;opacity:.75;transition:opacity .2s}
+footer .sano:hover{opacity:1}
+footer .sano svg{width:22px;height:22px;flex:none}
+footer .sano b{font-family:var(--titulo);font-weight:700;font-size:14px}
+
+.fixo{position:fixed;left:var(--gutter);right:var(--gutter);bottom:calc(12px + env(safe-area-inset-bottom));z-index:45;transition:opacity .3s ease,transform .3s ease}
+.fixo.some{opacity:0;transform:translateY(24px);pointer-events:none}
+
+/* animações de scroll, discretas */
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*80ms)}
+html.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .opcoes{grid-template-columns:1fr 1fr}
+  .dep{flex-basis:46%}
+}
+@media (min-width:900px){
+  :root{--gutter:40px}
+  .cab .nav{display:flex;align-items:center;gap:26px;font:500 15.5px var(--texto)}
+  .cab .nav a{text-decoration:none}
+  .cab .nav a:hover{color:var(--violeta)}
+  .menu-btn,.menu-mob{display:none}
+  .heroi{padding:64px 0 24px}
+  .duo{grid-template-columns:1.45fr 1fr}
+  .cartao-g{min-height:440px;padding-top:40px}
+  .opcoes{grid-template-columns:repeat(3,1fr);gap:16px}
+  .opcao{padding:20px 20px}
+  .paineis{grid-template-columns:1.45fr 1fr}
+  .painel{padding:56px 48px}
+  .painel.amarelo{grid-template-columns:1fr 1fr;align-items:center}
+  .painel.amarelo .bolhas{order:-1}
+  .dep{flex-basis:31.5%}
+  .painel-azul{grid-template-columns:.9fr 1.1fr;padding:56px 48px;align-items:center}
+  .mapa{height:100%;min-height:360px}
+  .sobre .grade{grid-template-columns:220px 1fr;gap:56px}
+  .avatar{width:200px;height:200px}
+  .faq .grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+  .faq .lista-faq{margin-top:0}
+  .final .caixa{padding:72px 48px}
+  .fixo{display:none}
+  footer{padding:56px 0 32px}
+  .rod-topo{grid-template-columns:auto 1fr;align-items:center;gap:28px}
+  .rod-cols{grid-template-columns:1fr 1fr 1.3fr;padding:36px 0}
+  .rod-cols .rod-end{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .rv{opacity:1;transform:none;transition:none}
+  .pedra,.brilho,.digitando span{animation:none}
+  .pilula,.opcao,.cab,.fixo,.menu-mob{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- personagens reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pedra" viewBox="0 0 120 100">
+    <path d="M60 4C92 4 116 24 116 54c0 28-22 42-56 42S4 82 4 54C4 24 28 4 60 4Z"/>
+    <path d="M40 50q6 6 12 0M68 50q6 6 12 0M52 66q8 6 16 0" fill="none" stroke="#2B2930" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12Z"/></symbol>
+  <symbol id="seta" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="wpp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></symbol>
+</svg>
+
+<div class="aviso">Atendimento presencial no Santo Antônio e online. <a href="#onde">Ver onde e quando</a></div>
+
+<header class="cab">
+  <div class="wrap linha">
+    <a class="logo" href="#topo" aria-label="Bruna Rizzieri, psicóloga">
+      <span class="bola" aria-hidden="true"></span>
+      <span><b>Bruna Rizzieri</b><small>psicóloga</small></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#ajuda">Como posso ajudar</a>
+      <a href="#como">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#onde">Onde atendo</a>
+      <a class="pilula violeta" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener">Agendar conversa</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuMob"><span class="linhas" aria-hidden="true"></span>Menu</button>
+  </div>
+  <nav class="menu-mob" id="menuMob" aria-label="Menu">
+    <div class="wrap">
+      <a href="#ajuda">Como posso ajudar</a>
+      <a href="#como">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#onde">Onde atendo</a>
+      <a class="pilula violeta" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener">Agendar conversa</a>
+    </div>
+  </nav>
+</header>
+
+<main id="topo">
+
+<!-- HERÓI -->
+<section class="heroi">
+  <div class="wrap centro">
+    <h1 class="rv">Começar a terapia dá frio na barriga. Dá para começar devagar.</h1>
+    <p class="sub rv" style="--i:1">Psicoterapia com a Bruna Rizzieri, psicóloga em Joinville, com terapia cognitivo-comportamental. Presencial no Santo Antônio ou online.</p>
+    <div class="acoes rv" style="--i:2">
+      <a class="pilula violeta" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wpp"/></svg>Agendar pelo WhatsApp</a>
+      <a class="pilula clara" style="box-shadow:inset 0 0 0 2px #E7E1DA" href="#como">Ver como funciona</a>
+    </div>
+
+    <div class="duo">
+      <article class="cartao-g rv">
+        <h3>Presencial, no Santo Antônio</h3>
+        <p>No Edifício Center Offices, sala 15, no bairro Santo Antônio, em Joinville.</p>
+        <a class="pilula escura" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Gostaria%20de%20agendar%20um%20atendimento%20presencial." target="_blank" rel="noopener">Agendar presencial</a>
+        <div class="cena" aria-hidden="true">
+          <svg class="poltrona" viewBox="0 0 240 150">
+            <rect x="34" y="40" width="172" height="80" rx="36" fill="#C9B9FA"/>
+            <rect x="14" y="70" width="52" height="64" rx="24" fill="#B4A0F3"/>
+            <rect x="174" y="70" width="52" height="64" rx="24" fill="#B4A0F3"/>
+            <rect x="56" y="88" width="128" height="40" rx="18" fill="#D9CDFB"/>
+            <rect x="40" y="132" width="10" height="18" rx="4" fill="#2B2930"/>
+            <rect x="190" y="132" width="10" height="18" rx="4" fill="#2B2930"/>
+          </svg>
+          <svg class="pedra" style="left:calc(50% - 46px);bottom:58px;width:92px;fill:#FF7A45"><use href="#pedra"/></svg>
+          <svg class="brilho" style="left:18%;top:20px;width:22px;fill:#FFCE3A"><use href="#estrela"/></svg>
+          <svg class="brilho" style="right:16%;top:46px;width:14px;fill:#9FD0F5;animation-delay:1.2s"><use href="#estrela"/></svg>
+        </div>
+      </article>
+
+      <article class="cartao-g rv" style="--i:1">
+        <h3>Online, de onde você estiver</h3>
+        <p>Pelo celular ou pelo computador, com dia e horário combinados no WhatsApp.</p>
+        <a class="pilula escura" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Gostaria%20de%20agendar%20um%20atendimento%20online." target="_blank" rel="noopener">Agendar online</a>
+        <div class="cena" aria-hidden="true">
+          <div class="cel">
+            <div class="tela">
+              <div class="topo-c"><i></i>Bruna Rizzieri</div>
+              <div class="bal eu">Oi, Bruna! Queria marcar uma primeira conversa. Ainda não sei bem explicar o que sinto.</div>
+              <div class="digitando"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <svg class="brilho" style="left:14%;top:30px;width:20px;fill:#F8B4CF"><use href="#estrela"/></svg>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ESCOLHA -->
+<section class="escolha" id="ajuda">
+  <div class="wrap centro">
+    <h2 class="rv" style="font-size:clamp(1.6rem,5.4vw,2.3rem)">O que te trouxe até aqui?</h2>
+    <p class="sub rv" style="margin:12px auto 0;--i:1">Toque no que mais se parece com o seu momento. A mensagem já vai pronta para a Bruna.</p>
+    <div class="opcoes">
+      <a class="opcao rv" data-tema="ansiedade" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26l6-12 6 12 6-12 6 12 4-8" fill="none" stroke="#FFCE3A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Ansiedade</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:1" data-tema="depressão e desânimo" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M12 30a8 8 0 0 1-1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13Z" fill="#9FD0F5"/></svg>
+        <span>Depressão e desânimo</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:2" data-tema="compulsão alimentar" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="12" fill="#FF7A45"/><path d="M20 11c0-4 3-6 7-6-1 4-3 6-7 6Z" fill="#7BC67E"/></svg>
+        <span>Compulsão alimentar</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:3" data-tema="a decisão sobre a maternidade" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="20" r="9" fill="#F8B4CF"/><circle cx="26" cy="20" r="9" fill="#C9B9FA" fill-opacity=".9"/></svg>
+        <span>Decisão sobre a maternidade</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:4" data-tema="atendimento para adolescente" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 9h20a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H13l-6 5v-5H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3Z" fill="#C9B9FA"/><path d="M30 15h5a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-1v4l-5-4h-7" fill="#5536D6"/></svg>
+        <span>Adolescentes</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:5" data-tema="autoconhecimento" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20a3 3 0 1 1 3-3 7 7 0 1 1-7-7 11 11 0 1 1-11 11" fill="none" stroke="#2F86C9" stroke-width="4" stroke-linecap="round"/></svg>
+        <span>Autoconhecimento</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como">
+  <div class="wrap paineis">
+    <div class="painel amarelo rv">
+      <div class="bolhas" aria-label="Trechos de avaliações de pacientes">
+        <div class="bolha"><b><i></i>Paciente, no Google</b>"Ferramentas práticas para lidar com desafios do dia a dia."</div>
+        <div class="bolha"><b><i style="background:#FF7A45"></i>Paciente, no Google</b>"Trouxe exercícios que me ajudaram a ter mais clareza sobre dúvidas e medos."</div>
+        <svg class="pedra" style="position:relative;width:96px;fill:#FF7A45;margin:10px 0 0 30px" aria-hidden="true"><use href="#pedra"/></svg>
+      </div>
+      <div>
+        <h2>Uma conversa que vira ferramenta</h2>
+        <p>A Bruna trabalha com terapia cognitivo-comportamental. Vocês olham juntos para o que você pensa, sente e faz, e saem de cada sessão com algo para praticar na semana.</p>
+        <a class="pilula clara" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Gostaria%20de%20entender%20como%20funciona%20a%20terapia%20com%20voc%C3%AA." target="_blank" rel="noopener">Perguntar como funciona</a>
+      </div>
+    </div>
+
+    <div class="painel rosa rv" style="--i:1">
+      <div>
+        <h2 style="font-size:clamp(1.7rem,5.4vw,2.4rem)">Como dar o primeiro passo</h2>
+      </div>
+      <ol class="passos">
+        <li><b>Mande uma mensagem</b>Em poucas palavras. Não precisa saber explicar tudo.</li>
+        <li><b>Escolha presencial ou online</b>E o horário que cabe na sua semana.</li>
+        <li><b>Primeira conversa</b>A Bruna escuta e vocês combinam por onde começar.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depo" id="depoimentos">
+  <div class="wrap centro">
+    <h2 class="rv">Quem já passou por aqui</h2>
+    <div class="nota rv" style="--i:1"><span class="estrelas" aria-hidden="true">★★★★★</span>5,0 em 26 avaliações no Google</div>
+    <div class="trilho" id="trilho" tabindex="0" aria-label="Avaliações reais do Google">
+      <article class="dep centro-off" style="text-align:left"><p>"Me ajudou a gerenciar a ansiedade e outras questões de forma cuidadosa e responsável."</p><div class="quem"><i>L</i><div>Luiza C.<small>Avaliação no Google</small></div></div></article>
+      <article class="dep" style="text-align:left"><p>"A Bruna me atendeu online, as sessões foram focadas no meu processo de decisão sobre maternidade. Ela foi super profissional e cuidadosa para abordar o tema."</p><div class="quem"><i>J</i><div>Joane C.<small>Avaliação no Google</small></div></div></article>
+      <article class="dep" style="text-align:left"><p>"Trabalhei com tratamento para depressão, ansiedade e compulsão alimentar. Obtive excelentes resultados e recebi alta."</p><div class="quem"><i>P</i><div>Paciente<small>Avaliação no Google</small></div></div></article>
+      <article class="dep" style="text-align:left"><p>"Sua abordagem com a Terapia Cognitivo-Comportamental me ajudou muito a evoluir em diversas esferas da minha vida."</p><div class="quem"><i>P</i><div>Paciente<small>Avaliação no Google</small></div></div></article>
+      <article class="dep" style="text-align:left"><p>"Muito agradecida pelo trabalho que realizou com minha sobrinha adolescente."</p><div class="quem"><i>F</i><div>Familiar de paciente<small>Avaliação no Google</small></div></div></article>
+      <article class="dep" style="text-align:left"><p>"Bruna é uma profissional humana e acolhedora."</p><div class="quem"><i>P</i><div>Paciente<small>Avaliação no Google</small></div></div></article>
+    </div>
+    <div class="controles">
+      <button type="button" id="ant" aria-label="Avaliação anterior"><svg style="transform:scaleX(-1)"><use href="#seta"/></svg></button>
+      <button type="button" id="prox" aria-label="Próxima avaliação"><svg><use href="#seta"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ATENDO -->
+<section class="onde" id="onde">
+  <div class="wrap">
+    <div class="painel-azul rv">
+      <div>
+        <h2>Onde e quando</h2>
+        <p class="sub" style="margin-top:12px">Presencial em Joinville ou online, com horário marcado pelo WhatsApp.</p>
+        <div class="locais" style="margin-top:22px">
+          <div class="local">
+            <b>Presencial</b>
+            <address>Edifício Center Offices, Sala 15<br>R. Pres. Prudente de Moraes, 673<br>Santo Antônio, Joinville, SC<br><a href="https://www.google.com/maps/search/?api=1&query=Psic%C3%B3loga%20Bruna%20B.%20Rizzieri%20-%20(presencial%20e%20online)&query_place_id=ChIJv81ajp-x3pQRyIu8EKovPj8" target="_blank" rel="noopener">Abrir rota</a></address>
+          </div>
+          <div class="local">
+            <b>Horários</b>
+            <address>Terça, das 9h às 12h<br>Quarta e quinta, das 13h às 20h<br><span class="lacuna">confirmar com a Bruna</span></address>
+          </div>
+        </div>
+      </div>
+      <iframe class="mapa" title="Mapa do consultório, Edifício Center Offices, Santo Antônio, Joinville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=R.%20Pres.%20Prudente%20de%20Moraes%2C%20673%2C%20Santo%20Ant%C3%B4nio%2C%20Joinville%20-%20SC&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre">
+  <div class="wrap grade">
+    <div class="avatar rv" role="img" aria-label="Espaço para a foto da Bruna"><small>Espaço para a foto da Bruna</small></div>
+    <div class="rv" style="--i:1">
+      <h2 style="font-size:clamp(1.7rem,5.4vw,2.4rem)">Oi, eu sou a Bruna</h2>
+      <p>Psicóloga em Joinville, atendo adultos e adolescentes com terapia cognitivo-comportamental, no consultório e online. <span class="lacuna">Texto da Bruna sobre a formação e o jeito de trabalhar</span></p>
+      <div class="chips">
+        <span>Terapia cognitivo-comportamental</span><span>Presencial e online</span><span>Adultos e adolescentes</span><span>CRP <span class="lacuna">a preencher</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERGUNTAS -->
+<section class="faq">
+  <div class="wrap grade">
+    <h2 class="rv" style="font-size:clamp(1.7rem,5.4vw,2.4rem)">Perguntas de quem está pensando em começar</h2>
+    <div class="lista-faq rv" style="--i:1">
+      <details>
+        <summary>Preciso saber explicar o que estou sentindo? <i></i></summary>
+        <p>Não. Muita gente chega sem saber dar nome ao que sente. A primeira conversa serve justamente para isso.</p>
+      </details>
+      <details>
+        <summary>Como funciona o atendimento online? <i></i></summary>
+        <p>Pelo celular ou pelo computador, de onde você estiver. Dia, horário e o link da sessão são combinados pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>A Bruna atende adolescentes? <i></i></summary>
+        <p>Sim. O acompanhamento de adolescentes é combinado com a família, começando por uma mensagem no WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Quanto custa a sessão? <i></i></summary>
+        <p>Os valores e as formas de pagamento são passados pelo WhatsApp, junto com os horários disponíveis.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <div class="caixa rv">
+      <h2>Que tal começar com uma mensagem?</h2>
+      <p>Sem compromisso. Você conta um pouco do seu momento e a Bruna responde.</p>
+      <a class="pilula escura" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wpp"/></svg>Falar com a Bruna</a>
+      <svg class="pedra" style="position:absolute;right:-14px;bottom:-18px;width:120px;fill:#FFCE3A" aria-hidden="true"><use href="#pedra"/></svg>
+      <svg class="brilho" style="left:8%;top:18%;width:22px;fill:#fff" aria-hidden="true"><use href="#estrela"/></svg>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rod-topo">
+      <a class="logo" href="#topo" aria-label="Bruna Rizzieri, psicóloga">
+        <span class="bola" aria-hidden="true"></span>
+        <span><b>Bruna Rizzieri</b><small>psicóloga</small></span>
+      </a>
+      <p>Terapia cognitivo-comportamental, presencial em Joinville e online.</p>
+    </div>
+    <div class="rod-cols">
+      <div>
+        <h4>Navegar</h4>
+        <a href="#ajuda">Como posso ajudar</a>
+        <a href="#como">Como funciona</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#onde">Onde atendo</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site." target="_blank" rel="noopener">WhatsApp<br>(47) 98495-2755</a>
+      </div>
+      <div class="rod-end">
+        <h4>Consultório</h4>
+        <p>Edifício Center Offices, Sala 15<br>R. Pres. Prudente de Moraes, 673<br>Santo Antônio, Joinville, SC</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=R.%20Pres.%20Prudente%20de%20Moraes%2C%20673%2C%20Joinville%20SC" target="_blank" rel="noopener">Ver no mapa</a>
+      </div>
+    </div>
+    <div class="rod-base">
+    <span>© 2026 Bruna Rizzieri</span>
+    <a class="sano" href="https://sanolab.com.br" target="_blank" rel="noopener" aria-label="Desenvolvido por Sano Lab, sanolab.com.br">
+      <span>Desenvolvido por</span>
+      <svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="sanoMask"><rect width="100" height="100" fill="#fff"/><circle cx="50" cy="48" r="20" fill="#000"/><circle cx="50" cy="104" r="22" fill="#000"/></mask></defs><circle cx="50" cy="50" r="42" fill="currentColor" mask="url(#sanoMask)"/></svg>
+      <b>Sano Lab</b>
+    </a>
+    </div>
+  </div>
+</footer>
+
+<a class="pilula violeta fixo" href="https://wa.me/5547984952755?text=Ol%C3%A1%2C%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wpp"/></svg>Agendar pelo WhatsApp</a>
+
+<script>
+(function(){
+  var NUM='5547984952755';
+  var $=function(i){return document.getElementById(i)};
+
+  /* opções: mensagem pronta para cada assunto */
+  [].forEach.call(document.querySelectorAll('.opcao'),function(a){
+    var t='Olá, Bruna! Vim pelo seu site e gostaria de conversar sobre '+a.getAttribute('data-tema')+'.';
+    a.href='https://wa.me/'+NUM+'?text='+encodeURIComponent(t);
+    a.target='_blank';a.rel='noopener';
+  });
+
+  /* carrossel de avaliações */
+  var trilho=$('trilho');
+  function passo(){var c=trilho.querySelector('.dep');return c?c.getBoundingClientRect().width+14:300}
+  $('ant').addEventListener('click',function(){trilho.scrollBy({left:-passo(),behavior:'smooth'})});
+  $('prox').addEventListener('click',function(){trilho.scrollBy({left:passo(),behavior:'smooth'})});
+
+  /* cabeçalho: sombra e menu do celular */
+  var cab=document.querySelector('.cab'),btn=$('menuBtn');
+  function sombra(){cab.classList.toggle('rolou',scrollY>8)}
+  addEventListener('scroll',sombra,{passive:true});sombra();
+  function menu(abrir){cab.classList.toggle('aberto',abrir);btn.setAttribute('aria-expanded',abrir?'true':'false')}
+  btn.addEventListener('click',function(){menu(!cab.classList.contains('aberto'))});
+  [].forEach.call(document.querySelectorAll('#menuMob a'),function(a){a.addEventListener('click',function(){menu(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+
+  /* botão fixo some no herói, no final e no rodapé */
+  var fixo=document.querySelector('.fixo');
+  if('IntersectionObserver' in window){
+    var vis=new Set();
+    var iof=new IntersectionObserver(function(es){
+      es.forEach(function(en){en.isIntersecting?vis.add(en.target):vis.delete(en.target)});
+      fixo.classList.toggle('some',vis.size>0);
+    });
+    iof.observe(document.querySelector('.heroi .acoes'));iof.observe(document.querySelector('.final'));iof.observe(document.querySelector('footer'));
+  }
+
+  /* entrada suave no scroll */
+  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var alvos=[].slice.call(document.querySelectorAll('.rv'));
+  if(reduz||!('IntersectionObserver' in window)){alvos.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+  alvos.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
