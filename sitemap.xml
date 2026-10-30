@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bruna-rizzieri.vercel.app/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bruna-rizzieri.vercel.app/"/>
+    <image:image><image:loc>https://bruna-rizzieri.vercel.app/foto-bruna.jpeg</image:loc><image:title>Bruna Rizzieri, psicóloga em Joinville</image:title></image:image>
+    <image:image><image:loc>https://bruna-rizzieri.vercel.app/consultorio-1.jpeg</image:loc><image:title>Consultório da psicóloga Bruna Rizzieri em Joinville</image:title></image:image>
+    <image:image><image:loc>https://bruna-rizzieri.vercel.app/consultorio-2.jpeg</image:loc><image:title>Poltrona e aparador no consultório</image:title></image:image>
+    <image:image><image:loc>https://bruna-rizzieri.vercel.app/consultorio-3.jpeg</image:loc><image:title>Sofá, planta e quadros no consultório</image:title></image:image>
+  </url>
+</urlset>

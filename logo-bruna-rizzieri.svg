@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="t d">
+  <title id="t">Bruna Rizzieri, psicóloga</title>
+  <desc id="d">Logo com dois círculos que se sobrepõem, um azul-petróleo e outro ocre, como uma conversa entre duas pessoas.</desc>
+  <defs>
+    <clipPath id="c"><circle cx="48" cy="60" r="36"/></clipPath>
+  </defs>
+  <!-- símbolo -->
+  <circle cx="48" cy="60" r="36" fill="#2E5A5F"/>
+  <circle cx="82" cy="68" r="26" fill="#E0B861"/>
+  <circle cx="82" cy="68" r="26" fill="#F6EBCB" clip-path="url(#c)"/>
+  <!-- nome -->
+  <text x="140" y="64" font-family="Outfit, 'Segoe UI', Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.8" fill="#2B2930">Bruna Rizzieri</text>
+  <text x="142" y="94" font-family="'Nunito Sans', 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="4.2" fill="#2E5A5F">PSICÓLOGA</text>
+</svg>
