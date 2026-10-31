@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Psicóloga em Joinville | Bruna Rizzieri, terapia TCC presencial e online</title>
-<meta name="description" content="Psicóloga em Joinville (SC) com terapia cognitivo-comportamental (TCC) para ansiedade, depressão, compulsão alimentar e decisões importantes. Adultos e adolescentes, presencial no Santo Antônio ou online. Nota 5,0 no Google.">
+<meta name="description" content="Psicóloga em Joinville (SC) com terapia cognitivo-comportamental (TCC) para ansiedade, fobias, depressão, TDAH, emagrecimento, relacionamentos e decisões importantes. Adultos e adolescentes, presencial no Santo Antônio ou online. Nota 5,0 no Google.">
 <meta name="author" content="Bruna Rizzieri">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://bruna-rizzieri.vercel.app/">
@@ -52,7 +52,7 @@
       "@id": "https://bruna-rizzieri.vercel.app/#pagina",
       "url": "https://bruna-rizzieri.vercel.app/",
       "name": "Psicóloga em Joinville | Bruna Rizzieri, terapia TCC presencial e online",
-      "description": "Psicóloga em Joinville (SC) com terapia cognitivo-comportamental (TCC) para ansiedade, depressão, compulsão alimentar e decisões importantes.",
+      "description": "Psicóloga em Joinville (SC) com terapia cognitivo-comportamental (TCC) para ansiedade, fobias, depressão, TDAH, emagrecimento, relacionamentos e decisões importantes.",
       "inLanguage": "pt-BR",
       "isPartOf": {"@id": "https://bruna-rizzieri.vercel.app/#site"},
       "about": {"@id": "https://bruna-rizzieri.vercel.app/#negocio"},
@@ -84,7 +84,9 @@
       "geo": {"@type": "GeoCoordinates", "latitude": -26.2750257, "longitude": -48.8569167},
       "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJv81ajp-x3pQRyIu8EKovPj8",
       "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "13:00", "closes": "18:00"},
         {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "12:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "15:00", "closes": "19:00"},
         {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "13:00", "closes": "20:00"}
       ],
       "areaServed": [
@@ -92,7 +94,7 @@
         {"@type": "Country", "name": "Brasil"}
       ],
       "availableLanguage": "pt-BR",
-      "knowsAbout": ["Terapia cognitivo-comportamental", "Ansiedade", "Depressão", "Compulsão alimentar", "Decisão sobre a maternidade", "Orientação profissional e de carreira", "Psicoterapia de adolescentes"],
+      "knowsAbout": ["Terapia cognitivo-comportamental", "Ansiedade", "Fobias", "Depressão", "Obesidade e emagrecimento", "TDAH", "Tomada de decisões", "Relacionamentos","Orientação profissional e de carreira", "Psicoterapia de adolescentes"],
       "founder": {"@id": "https://bruna-rizzieri.vercel.app/#bruna"},
       "employee": {"@id": "https://bruna-rizzieri.vercel.app/#bruna"},
       "sameAs": ["https://www.google.com/maps/place/?q=place_id:ChIJv81ajp-x3pQRyIu8EKovPj8"],
@@ -283,6 +285,8 @@ h3{font-size:1.35rem;line-height:1.2}
 .local b{display:block;font:700 18px var(--titulo);margin-bottom:4px}
 .local address{font-style:normal;font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9)}
 .local a{color:#fff;font-weight:700;text-underline-offset:3px}
+.turno{display:block;margin-top:12px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.turno:first-child{margin-top:2px}
 .mapa{width:100%;height:280px;border:0;border-radius:20px;display:block;background:rgba(255,255,255,.15)}
 .lacuna{display:inline-block;background:var(--sol);color:var(--tinta);padding:0 8px;border-radius:6px;font-weight:700;font-size:13.5px}
 
@@ -293,6 +297,12 @@ h3{font-size:1.35rem;line-height:1.2}
 .avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:58% 32%;display:block}
 .avatar::after{content:"";position:absolute;width:42px;height:42px;border-radius:50%;background:var(--sol);right:-4px;bottom:8px;border:4px solid #fff}
 .sobre p{margin-top:12px;max-width:58ch}
+.sobre .sobre-lead{font-size:1.12em;color:var(--tinta);font-weight:500}
+.formacao{margin-top:22px;padding:20px 22px;border-radius:20px;background:var(--areia);max-width:58ch}
+.formacao h3{font:700 13px var(--titulo);letter-spacing:.08em;text-transform:uppercase}
+.formacao ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:9px}
+.formacao li{position:relative;padding-left:20px;line-height:1.5}
+.formacao li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--sol)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .chips span{background:var(--areia);border-radius:999px;padding:7px 14px;font:600 13.5px var(--titulo)}
 
@@ -369,7 +379,8 @@ html.js .rv.in{opacity:1;transform:none}
   .dep{flex-basis:31.5%}
   .painel-azul{grid-template-columns:.9fr 1.1fr;padding:56px 48px;align-items:center}
   .mapa{height:100%;min-height:360px}
-  .sobre .grade{grid-template-columns:220px 1fr;gap:56px}
+  .sobre .grade{grid-template-columns:220px 1fr;gap:56px;align-items:start}
+  .sobre .avatar{position:sticky;top:110px}
   .avatar{width:200px;height:200px}
   .fotos{grid-template-columns:1.5fr 1fr 1fr;gap:16px}
   .fotos figure:first-child{grid-column:auto}
@@ -489,29 +500,29 @@ html.js .rv.in{opacity:1;transform:none}
     <h2 class="rv" style="font-size:clamp(1.6rem,5.4vw,2.3rem)">O que te trouxe até aqui?</h2>
     <p class="sub rv" style="margin:12px auto 0;--i:1">Toque no que mais se parece com o seu momento. A mensagem já vai pronta para a Bruna.</p>
     <div class="opcoes">
-      <a class="opcao rv" data-tema="ansiedade" href="#">
+      <a class="opcao rv" data-tema="ansiedade ou fobias" href="#">
         <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26l6-12 6 12 6-12 6 12 4-8" fill="none" stroke="#E0B861" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>Ansiedade</span><svg class="seta"><use href="#seta"/></svg>
+        <span>Ansiedade e fobias</span><svg class="seta"><use href="#seta"/></svg>
       </a>
-      <a class="opcao rv" style="--i:1" data-tema="depressão e desânimo" href="#">
+      <a class="opcao rv" style="--i:1" data-tema="depressão" href="#">
         <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M12 30a8 8 0 0 1-1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13Z" fill="#A9C7D6"/></svg>
-        <span>Depressão e desânimo</span><svg class="seta"><use href="#seta"/></svg>
+        <span>Depressão</span><svg class="seta"><use href="#seta"/></svg>
       </a>
-      <a class="opcao rv" style="--i:2" data-tema="compulsão alimentar" href="#">
+      <a class="opcao rv" style="--i:2" data-tema="obesidade e emagrecimento" href="#">
         <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="12" fill="#C8765A"/><path d="M20 11c0-4 3-6 7-6-1 4-3 6-7 6Z" fill="#8DAA82"/></svg>
-        <span>Compulsão alimentar</span><svg class="seta"><use href="#seta"/></svg>
+        <span>Obesidade e emagrecimento</span><svg class="seta"><use href="#seta"/></svg>
       </a>
-      <a class="opcao rv" style="--i:3" data-tema="a decisão sobre a maternidade" href="#">
+      <a class="opcao rv" style="--i:3" data-tema="TDAH" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="9" cy="11" r="4" fill="#E0B861"/><circle cx="31" cy="10" r="3.5" fill="#C8765A"/><circle cx="10" cy="30" r="3.5" fill="#8DAA82"/><circle cx="30" cy="29" r="4" fill="#BDB8D4"/><circle cx="20" cy="20" r="6" fill="#3F7691"/></svg>
+        <span>TDAH</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:4" data-tema="uma decisão importante" href="#">
+        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35V21M20 21L9 8M20 21l11-13" fill="none" stroke="#2E5A5F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="8" r="4" fill="#E3BDC3"/><circle cx="31" cy="8" r="4" fill="#E0B861"/></svg>
+        <span>Tomada de decisões</span><svg class="seta"><use href="#seta"/></svg>
+      </a>
+      <a class="opcao rv" style="--i:5" data-tema="relacionamentos" href="#">
         <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="20" r="9" fill="#E3BDC3"/><circle cx="26" cy="20" r="9" fill="#BDB8D4" fill-opacity=".9"/></svg>
-        <span>Decisão sobre a maternidade</span><svg class="seta"><use href="#seta"/></svg>
-      </a>
-      <a class="opcao rv" style="--i:4" data-tema="atendimento para adolescente" href="#">
-        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 9h20a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H13l-6 5v-5H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3Z" fill="#BDB8D4"/><path d="M30 15h5a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-1v4l-5-4h-7" fill="#2E5A5F"/></svg>
-        <span>Adolescentes</span><svg class="seta"><use href="#seta"/></svg>
-      </a>
-      <a class="opcao rv" style="--i:5" data-tema="autoconhecimento" href="#">
-        <svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20a3 3 0 1 1 3-3 7 7 0 1 1-7-7 11 11 0 1 1-11 11" fill="none" stroke="#3F7691" stroke-width="4" stroke-linecap="round"/></svg>
-        <span>Autoconhecimento</span><svg class="seta"><use href="#seta"/></svg>
+        <span>Relacionamentos</span><svg class="seta"><use href="#seta"/></svg>
       </a>
     </div>
   </div>
@@ -580,7 +591,7 @@ html.js .rv.in{opacity:1;transform:none}
           </div>
           <div class="local">
             <b>Horários</b>
-            <address>Terça, das 9h às 12h<br>Quarta e quinta, das 13h às 20h<br><span class="lacuna">confirmar com a Bruna</span></address>
+            <address><span class="turno">Presencial</span>Terça, das 9h às 12h<br>Quarta e quinta, das 13h às 20h<span class="turno">Online</span>Segunda, das 13h às 18h<br>Terça, das 15h às 19h</address>
           </div>
         </div>
       </div>
@@ -595,9 +606,21 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="avatar rv"><img src="foto-bruna.jpeg" alt="Bruna Rizzieri, psicóloga em Joinville" width="170" height="170" loading="lazy"></div>
     <div class="rv" style="--i:1">
       <h2 style="font-size:clamp(1.7rem,5.4vw,2.4rem)">Oi, eu sou a Bruna</h2>
-      <p>Psicóloga em Joinville, atendo adultos e adolescentes com terapia cognitivo-comportamental, no consultório e online. <span class="lacuna">Texto da Bruna sobre a formação e o jeito de trabalhar</span></p>
+      <p class="sobre-lead">Sou Bruna Bortolatto Rizzieri, psicóloga clínica. Há mais de 10 anos acompanho pessoas em seus processos de autoconhecimento, mudança de hábitos e desenvolvimento pessoal e profissional.</p>
+      <p>No consultório, ofereço um espaço ético, seguro e colaborativo. Acredito que a terapia é um trabalho em equipe: não trago respostas prontas, mas caminho ao seu lado para investigarmos seus desafios, testarmos novas perspectivas e alinharmos direções claras para o seu processo.</p>
+      <p>Minha atuação é fundamentada na Terapia Cognitivo-Comportamental (TCC), uma abordagem focada em objetivos e embasada em evidências científicas. Por isso, o trabalho não fica só na hora da sessão: entre um encontro e outro, construímos planos de ação práticos para você treinar habilidades importantes na sua rotina real.</p>
+      <p>Minha prática é dedicada especialmente ao psicodiagnóstico, à regulação emocional, à mudança de comportamento e aos processos de tomada de decisão e resolução de problemas.</p>
+      <div class="formacao">
+        <h3>Formação</h3>
+        <ul>
+          <li>Mestre em Psicologia pela Universidade Federal de Santa Catarina (UFSC)</li>
+          <li>Pós-graduada em Terapia Cognitivo-Comportamental</li>
+          <li>Formações complementares em Psicopatologia, Manejo de Suicidabilidade, Comportamento Alimentar e Orientação Profissional e de Carreira</li>
+        </ul>
+      </div>
+      <p>Se você busca um acompanhamento estruturado, humano e comprometido com ações reais para a sua rotina, será um prazer caminhar ao seu lado.</p>
       <div class="chips">
-        <span>Terapia cognitivo-comportamental</span><span>Presencial e online</span><span>Adultos e adolescentes</span><span>CRP <span class="lacuna">a preencher</span></span>
+        <span>Terapia cognitivo-comportamental</span><span>Presencial e online</span><span>Adultos e adolescentes</span><span>CRP 12/13877</span>
       </div>
     </div>
   </div>
@@ -686,7 +709,7 @@ html.js .rv.in{opacity:1;transform:none}
       </div>
     </div>
     <div class="rod-base">
-    <span>© 2026 Bruna Rizzieri</span>
+    <span>© 2026 Bruna Rizzieri · CRP 12/13877</span>
     <a class="sano" href="https://sanolab.com.br" target="_blank" rel="noopener" aria-label="Desenvolvido por Sano Lab, sanolab.com.br">
       <span>Desenvolvido por</span>
       <svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="sanoMask"><rect width="100" height="100" fill="#fff"/><circle cx="50" cy="48" r="20" fill="#000"/><circle cx="50" cy="104" r="22" fill="#000"/></mask></defs><circle cx="50" cy="50" r="42" fill="currentColor" mask="url(#sanoMask)"/></svg>
